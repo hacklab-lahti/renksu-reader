@@ -1,0 +1,26 @@
+[package]
+name = "renksu-reader"
+version = "0.1.0"
+authors = ["Matti Virkkunen <mvirkkunen@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+cortex-m = "0.6.0"
+cortex-m-rt = "0.6.8"
+embedded-graphics = "0.4.8"
+embedded-hal = "0.2.0"
+heapless = "0.4.4"
+#mfrc522 = "0.2.0"
+nb = "0.1.2"
+sh1106 = "0.2.0"
+stm32f1xx-hal = { version = "0.3.0", features = ["stm32f103", "rt"] }
+panic-semihosting = "0.5.2"
+
+[dependencies.mfrc522]
+git = "https://github.com/mvirkkunen/mfrc522"
+rev = "b12830a0d8223bd6bd524374de9674a4dd1eec89"
+
+[dependencies.cortex-m-rtfm]
+git = "https://github.com/japaric/cortex-m-rtfm"
+rev = "fafeeb27270ef24fc3852711c6032f65aa7dbcc0"
+features = ["timer-queue"]
